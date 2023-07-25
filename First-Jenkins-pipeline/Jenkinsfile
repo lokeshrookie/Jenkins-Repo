@@ -3,26 +3,11 @@ pipeline {
     docker { image 'node:16-alpine' }
   }
   stages {
-    stage('Build') {
-      steps {
-        sh 'node --version'
-        echo "Build Stage"
-        echo "Build Successful"
-      }
-    }
     stage('Test') {
       steps {
         sh 'node --version'
-        echo "Test Stage"
-        echo "Testing Successful"
       }
     }
-    stage('Deploy') {
-      steps {
-        sh 'node --version'
-        echo "Deployment Stage"
-        echo "Deployment Successful"
-      }
-    }
+    
   }
 }
